@@ -1,6 +1,6 @@
 // Time Complexity : O(n)
 // Space Complexity : O(m)
-// where m are the teams given in the input 
+// where m are the number of teams given in the input 
 
 class Solution {
 public:
