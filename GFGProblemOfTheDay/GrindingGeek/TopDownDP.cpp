@@ -1,3 +1,6 @@
+// Time Complexity : O(n * total)
+// Space Complexity : O(n * total) + O(n) (auxilary stack space)
+
 class Solution{
     private:
     int f(vector<int> &cost , int ind , int total , int n , vector<vector<int>> &dp) {

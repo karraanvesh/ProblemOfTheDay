@@ -1,3 +1,6 @@
+// Time Complexity : O(n + m)
+// Space Complexity : O(1)
+
 class Solution {
     private:
     void mapFreq(string &str , int n , vector<int> &mp) {

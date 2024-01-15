@@ -1,3 +1,6 @@
+// Time Complexity : O(n * total)
+// Space Complexity : O(2 * total) ~ O(total) 
+
 class Solution{
     public:
     int max_courses(int n, int total, vector<int> &cost)
