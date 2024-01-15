@@ -1,3 +1,7 @@
+// Time Complexity  : O(NlogN)
+// Space Complexity : O(N*M)
+// where N is the number of rows and M are the number of columns 
+
 class Solution
 {   
     public:
