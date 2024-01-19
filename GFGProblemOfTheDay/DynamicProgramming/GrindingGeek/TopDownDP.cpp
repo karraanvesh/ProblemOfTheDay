@@ -1,6 +1,8 @@
 // Time Complexity : O(n * total)
 // Space Complexity : O(n * total) + O(n) (auxilary stack space)
 
+// Problem Link : https://www.geeksforgeeks.org/problems/grinding-geek/1
+
 class Solution{
     private:
     int f(vector<int> &cost , int ind , int total , int n , vector<vector<int>> &dp) {

@@ -2,6 +2,8 @@
 // Space Complexity : O(N*M)
 // where N is the number of rows and M are the number of columns 
 
+// Problem Link : https://www.geeksforgeeks.org/problems/find-duplicate-rows-in-a-binary-matrix/1
+
 class Solution
 {   
     public:

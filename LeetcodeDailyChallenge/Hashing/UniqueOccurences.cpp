@@ -2,6 +2,8 @@
 // Space Complexity : O(n)
 // where n is the size of the arr
 
+// Problem Link : https://leetcode.com/problems/unique-number-of-occurrences/?envType=daily-question&envId=2024-01-17
+
 class Solution {
 public:
     bool uniqueOccurrences(vector<int>& arr) {

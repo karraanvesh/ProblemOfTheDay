@@ -1,6 +1,8 @@
 // Time Complexity : O(n * m)
 // Space Complexity : O(n * m) + O(logn) (auxilary stack space)
 
+// Problem Link : https://www.geeksforgeeks.org/problems/sequence-of-sequence1155/1
+
 class Solution{
     private:
     int f(int n , int m , int prev , vector<vector<int>> &dp) {
