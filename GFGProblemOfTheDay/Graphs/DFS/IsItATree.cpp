@@ -36,13 +36,12 @@ class Solution {
             
             pair<int , int> p;
             
-            if(u < v) {
-                p.first = u;
-                p.second = v;
-            } else {
-                p.first = v;
-                p.second = u;
+            if(v > u) {
+                swap(u , v);
             }
+            
+            p.first = u;
+            p.second = v;
             
             if(st.count(p) != 0) return 0;
             
