@@ -2,6 +2,12 @@
 // Space Complexity : O(2 * n * m) ~ O(n * m)
 // where n and m are the rows and columns 
 
+/*
+    Note : We have directly converted the topdown dp solution to the bottomup dp 
+    using 2 two dimensional vectors (which leads us to directly space optimize 
+    the solution as well ) . 
+*/
+
 class Solution {
 public:
     int findPaths(int m, int n, int maxMoves, int startRow, int startCol) {
