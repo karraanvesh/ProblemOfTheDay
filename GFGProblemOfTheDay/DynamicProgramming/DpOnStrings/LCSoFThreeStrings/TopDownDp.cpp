@@ -1,0 +1,31 @@
+// Time Complexity : O(n1 * n2 * n3)
+// Space Complexity : O(n1 * n2 * n3)
+
+// Problem Link : https://www.geeksforgeeks.org/problems/lcs-of-three-strings0028/1
+
+class Solution
+{
+    private :
+    int dp[30][30][30];
+    int f(string &s1 , string &s2 , string &s3 , int i , int j , int k ) {
+        if(i == -1 or j == -1 or k == -1)
+        return 0;
+        
+        if(dp[i][j][k] != -1) return dp[i][j][k];
+        
+        if(s1[i] == s2[j] and s2[j] == s3[k]) {
+            return dp[i][j][k] = 1 + f(s1 , s2 , s3 , i-1 , j-1 , k-1);
+        }
+        
+        return dp[i][j][k] = max({f(s1 , s2 , s3 , i-1 , j , k) , f(s1 , s2 , s3 , i , j-1 , k) , f(s1 , s2 , s3 , i , j , k-1)});
+    }
+    public:
+
+    int LCSof3 (string s1, string s2, string s3, int n1, int n2, int n3)
+    {
+      
+       memset(dp , -1 , sizeof dp);
+       
+       return f(s1 , s2 , s3 , n1 - 1 , n2 - 1 , n3 - 1);
+    }
+};
