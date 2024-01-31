@@ -1,4 +1,4 @@
-// Time Complexity  : O(n * k)
+// Time Complexity  : O(n * n * k)
 // Space Complexity : O(2 * k) ~ O(k)
 
 class Solution {

@@ -1,4 +1,4 @@
-// Time Complexity  : O(n * k)
+// Time Complexity  : O(n * n * k)
 // Space Complexity : O(n * k) + O(n) (for auxilary stack space)
 
 // Problem Link : https://leetcode.com/problems/k-inverse-pairs-array/description/?envType=daily-question&envId=2024-01-27
