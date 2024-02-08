@@ -15,10 +15,8 @@ class Solution {
 
         for(int i = 1 ; i*i <= n ; i++) {
             int x = f(n - i*i , dp);
-
-            if(x != -1) {
-                mini = min(mini , 1 + x);
-            }
+            
+            mini = min(mini , 1 + x);
         }
 
         return dp[n] = (mini == INT_MAX) ? -1 : mini;
