@@ -19,7 +19,9 @@ public:
 
         for(int i = 1 ; i < n ; i++) {
             int maxi = 1 , pos = i;
+
             for(int j = i-1 ; j >= 0 ; j--) {
+
                 int currNum = nums[i];
                 int prevNum = nums[j];
 
