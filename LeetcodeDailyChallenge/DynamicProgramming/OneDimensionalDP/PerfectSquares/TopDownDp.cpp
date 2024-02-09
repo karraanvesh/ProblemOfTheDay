@@ -9,7 +9,7 @@ class Solution {
 
         if(n == 0 ) return 0;
 
-        if(dp[n] != -2) return dp[n];
+        if(dp[n] != -1) return dp[n];
 
         int mini = INT_MAX;
 
@@ -19,11 +19,11 @@ class Solution {
             mini = min(mini , 1 + x);
         }
 
-        return dp[n] = (mini == INT_MAX) ? -1 : mini;
+        return dp[n] = mini;
     }
 public:
     int numSquares(int n) {
-        vector<int> dp(n+1 , -2);
+        vector<int> dp(n+1 , -1);
 
         return f(n , dp);
     }
