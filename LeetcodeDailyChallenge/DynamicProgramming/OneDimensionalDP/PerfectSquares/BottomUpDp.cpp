@@ -11,12 +11,11 @@ public:
 
             for(int i = 1 ; i*i <= val ; i++) {
                 int x = dp[val - i*i];
-                if(x != -1) {
-                    mini = min(mini , 1 + x);
-                }
+                
+                mini = min(mini , 1 + x);
             }
 
-            dp[val] = (mini == INT_MAX) ? -1 : mini;
+            dp[val] = mini;
         }
 
         return dp[n];
