@@ -35,7 +35,28 @@ public:
 	        return true;
 	    }
 	    
-	    if(distinctFreqCount > 2) return false;
+	    if(distinctFreqCount > 2) {
+            // s contains more than 2 characters with different 
+            // frequencies like [ 2 , 3 , 4] or [4 , 6 , 7] etc 
+            // removing 1 character doesn't make all frequencies 
+            // equal 
+
+            return false;
+        }
+
+        /*
+            s contains only 2 characters or all the characters in s 
+            have only 2 distinct frequencies . But we can only make 
+            all the frequencies to be equal if maximum freq is 
+            repeated for only once and smaller may be repeated any 
+            number of times i.e., cases like [2 , 2 , 3] or [ 2 , 3] 
+            or [4 , 4 , 4 , 4 , 5] etc . 
+
+            But cases like [2 , 3 , 3] cannot be made equal because 
+            here maximum  repeats for more than once , so we require 
+            more than one operation or number of times maximum had occured 
+            to make two frequencies equal 
+        */
 	    
 	    set<int> :: iterator itr1 , itr2;
 	    
