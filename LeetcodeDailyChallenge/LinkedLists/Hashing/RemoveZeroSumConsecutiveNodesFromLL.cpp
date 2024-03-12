@@ -28,12 +28,11 @@ public:
                 ListNode *nextNode = node->next;
                 int temp = sum + nextNode->val;
                 
-                while(nextNode != NULL)                 {
-                                                   mp.erase(temp);
-                  nextNode = nextNode->next;
-                  if(nextNode != NULL)
-                      temp += nextNode->val;
-                    
+                while(nextNode != NULL){
+                    mp.erase(temp);
+                    nextNode = nextNode->next;
+                    if(nextNode != NULL)
+                    temp += nextNode->val;    
                 }
                 
                 node->next = NULL;
