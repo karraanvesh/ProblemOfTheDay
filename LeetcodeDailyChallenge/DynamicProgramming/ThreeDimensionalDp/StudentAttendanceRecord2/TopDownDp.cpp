@@ -1,5 +1,5 @@
-// Time  Complexity : O(n)
-// Space Complexity : O(n)
+// Time  Complexity : O(n * 2 * 3) ~ O(n)
+// Space Complexity : O(n * 2 * 3) ~ O(n)
 
 // Problem Link : https://leetcode.com/problems/student-attendance-record-ii/description/
 class Solution {
