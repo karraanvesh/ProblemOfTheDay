@@ -42,20 +42,7 @@ class DSU {
 
         return ;
     }
-
-    bool isConnected(int n) {
-        set<int> st;
-
-        for(int i = 1 ; i <= n ; i++) {
-            st.insert(findPar(i));
-        }
-
-        bool result = (st.size() == 1);
-
-        return result;
-    }
 };
-
 
 class Solution {
     private :
@@ -71,6 +58,8 @@ public:
         int result = 0;
         sort(edges.begin() , edges.end() , comp);
 
+        int ct1 = 0 , ct2 = 0;
+
         for(int i = 0 ; i < m ; i++) {
 
             int type = edges[i][0];
@@ -78,28 +67,26 @@ public:
             int v = edges[i][2];
 
             if(type == 3) {
-                
-                bool b = false;
+
                 if(obj1.findPar(u) != obj1.findPar(v)) {
-                    b = true;
+                    ct1++;
                     obj1.Union(u , v);
                 }
 
                 if(obj2.findPar(u) != obj2.findPar(v)) {
-                    b = true;
+                    ct2++;
                     obj2.Union(u , v);
                 }
 
-                if(!b) {
+                else {
                     result++;
                 }
-
             }
 
             else if(type == 2) {
 
                 if(obj2.findPar(u) != obj2.findPar(v)) {
-
+                    ct2++;
                     obj2.Union(u , v);
                 }
 
@@ -111,7 +98,7 @@ public:
             else if(type == 1) {
 
                 if(obj1.findPar(u) != obj1.findPar(v)) {
-
+                    ct1++;
                     obj1.Union(u , v);
                 }
 
@@ -121,8 +108,8 @@ public:
             }
         }
 
-        bool canTraverse = obj1.isConnected(n) and obj2.isConnected(n);
-        if(!canTraverse) return -1;
+        if(ct1 < n-1 or ct2 < n-1) 
+        return -1;
 
         return result;
     }
